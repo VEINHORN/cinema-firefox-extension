@@ -1,0 +1,1 @@
+Cinema Firefox extension
