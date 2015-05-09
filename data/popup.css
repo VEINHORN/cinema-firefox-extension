@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('glyphicons-halflings-regular.ttf');
+}
+
+body {
+  height: 600px;
+  width: 420px;
+  background-color: #263238;
+  margin: 0px;
+  padding: 0px;
+}
+
+#movies {
+  margin-bottom: 50px;
+}
+
+#search_field {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 0px;
+  color: #37474F;
+  font-size: 120%;
+  font-family: "Open Sans";;
+  font-weight: 200;
+}
+
+#redirect_btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0px;
+  background-color: #455A64;
+  color: #ECEFF1;
+  font-size: 120%;
+  font-weight: 300;
+  font-family: "Aller";
+  border-top-color: #90A4AE;
+  border-top-width: 1px;
+}
+
+#redirect_btn:hover {
+  background-color: #546E7A;
+}
+
+.poster-container {
+  padding: 10px;
+}
+
+.movie-data {
+  padding-top: 10px;
+  padding-left: 25px;
+}
+
+.poster {
+  width: 65px;
+  height: auto;
+}
+
+.title {
+  color: #CFD8DC;
+  font-size: 17px;
+  font-family: "Lato";
+}
+
+.genres {
+  font-family: "Arvo";
+  font-style: bold;
+  font-size: 12px;
+  color: #CFD8DC;
+}
+
+.movie-item {
+  background-color: #455A64;
+  margin-right: 0px;
+  margin-left: 0px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #263238;
+}
+
+.movie-item:hover {
+  background-color: #607D8B;
+}
+
+/* enable absolute positioning */
+.inner-addon {
+    position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.right-addon input { padding-right: 30px; }
