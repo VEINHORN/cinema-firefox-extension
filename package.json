@@ -8,5 +8,35 @@
   "version": "0.1",
   "permissions": {
     "cross-domain-content": ["http://zerx.co/*"]
-  }
+  },
+  "preferences": [
+    {
+      "description": "Минимальное время неактивности клавиатуры (миллисекунды), после которого идет запрос на сервер:",
+      "name": "typing_interval",
+      "type": "integer",
+      "value": 500,
+      "title": "Typing interval"
+    },
+    {
+      "description": "Промежуток проверки зеркала:",
+      "name": "domain_checking_interval",
+      "type": "integer",
+      "value": 10000,
+      "title": "Checking domain interval"
+    },
+    {
+      "description": "Текущее зеркало для перенаправления:",
+      "name": "active_domain",
+      "type": "string",
+      "value": "zerx.co",
+      "title": "Active domain"
+    },
+    {
+      "description": "Домены, с которых производится перенаправление:",
+      "name": "domains_to_redirect",
+      "type": "string",
+      "value": "zerx.co",
+      "title": "Domains to redirect"
+    }
+  ]
 }
