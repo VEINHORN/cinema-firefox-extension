@@ -4,8 +4,9 @@
 }
 
 body {
-  height: 600px;
+  height: 100px;
   width: 420px;
+  max-height: 650px;
   background-color: #263238;
   margin: 0px;
   padding: 0px;
@@ -57,13 +58,23 @@ body {
   height: auto;
 }
 
+.poster:hover {
+  cursor: pointer;
+}
+
 .title {
   color: #CFD8DC;
   font-size: 17px;
   font-family: "Lato";
+  text-decoration: underline;
+}
+
+.title:hover {
+  cursor: pointer;
 }
 
 .genres {
+  margin-top: 10px;
   font-family: "Arvo";
   font-style: bold;
   font-size: 12px;
