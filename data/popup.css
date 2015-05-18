@@ -8,8 +8,8 @@ body {
   width: 420px;
   max-height: 650px;
   background-color: #263238;
-  margin: 0px;
   padding: 0px;
+  overflow-x: hidden;
 }
 
 #movies {
@@ -17,7 +17,6 @@ body {
 }
 
 #search_field {
-  width: 100%;
   margin-top: 10px;
   border-radius: 0px;
   color: #37474F;

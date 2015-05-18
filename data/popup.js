@@ -38,6 +38,8 @@ function updateMovieContainer() {
     });
   } else {
     clearMoviesContainer();
+    self.port.emit("resize-popup-height", 100);
+    self.port.emit("resize-popup-width", 420);
   }
 }
 
@@ -57,7 +59,8 @@ function updateMovies(movies) {
   console.log('Movie container updated.');
 
   self.port.emit("resize-popup-height", 650);
-  
+  self.port.emit("resize-popup-width", 430);
+
   $("#loading_icon").fadeOut(400, function() {
     $(this).replaceWith("<i class='glyphicon glyphicon-search' id='search_icon'></i>");
   });
