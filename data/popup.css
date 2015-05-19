@@ -4,9 +4,7 @@
 }
 
 body {
-  height: 100px;
-  width: 420px;
-  max-height: 650px;
+  height: auto;
   background-color: #263238;
   padding: 0px;
   overflow-x: hidden;
@@ -14,6 +12,8 @@ body {
 
 #movies {
   margin-bottom: 50px;
+  height: auto;
+  width: 100%;
 }
 
 #search_field {
