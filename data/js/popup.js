@@ -1,17 +1,17 @@
 var typing_interval = self.options.typing_interval;
 
 $(document).ready(function() {
-  var timerIdentifier;
+  var timerId;
 
   $('#redirect_btn').click(createHomePageTab);
-  $(document).on("click",".movie-item", createMovieTab);
+  $(document).on("click", ".movie-item", createMovieTab);
 
   $('#search_field').keyup(function() {
-      clearTimeout(timerIdentifier);
-      timerIdentifier = setTimeout(updateMovieContainer, typing_interval);
+      clearTimeout(timerId);
+      timerId = setTimeout(updateMovieContainer, typing_interval);
     });
     $('#search_field').keydown(function() {
-      clearTimeout(timerIdentifier);
+      clearTimeout(timerId);
     });
 });
 
@@ -54,10 +54,19 @@ function updateMovies(movies) {
   clearMoviesContainer();
 
   $.each(movies, function(index, movie) {
-    $("#movies").append("<div movie-url='" + movie.url + "' class='row movie-item'><div class='col-xs-2 poster-container'><img class='poster' src='" +
-    movie.poster + "'></div><div class='col-xs-10 movie-data'><p class='title'>" +
-    movie.name + "</p><p class='genres'>" +
-    beauty_genres(movie.year, movie.genres) + "</p></div>" + "</div>").children(':last').hide().fadeIn(1000);
+    var movieDiv = $('<div>').addClass('row movie-item').attr('movie-url', movie.url);
+    var posterDiv = $('<div>').addClass('col-xs-2 poster-container');
+    var movieDataDiv = $('<div>').addClass('col-xs-10 movie-data');
+
+    var poster = $('<img>').addClass('poster').attr('src', movie.poster);
+    var title = $('<p>').addClass('title').text(movie.name);
+    var genres = $('<p>').addClass('genres').text(beauty_genres(movie.year, movie.genres));
+
+    posterDiv.append(poster);
+    movieDataDiv.append(title).append(genres);
+    movieDiv.append(posterDiv).append(movieDataDiv);
+
+    $('#movies').append(movieDiv).children(':last').hide().fadeIn(1000);
   });
   console.log('Movie container updated.');
 
