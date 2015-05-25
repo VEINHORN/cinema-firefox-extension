@@ -3,7 +3,6 @@ var typing_interval = self.options.typing_interval;
 $(document).ready(function() {
   var timerIdentifier;
 
-  $('#search_field').focus();
   $('#redirect_btn').click(createHomePageTab);
   $(document).on("click",".movie-item", createMovieTab);
 
@@ -14,6 +13,10 @@ $(document).ready(function() {
     $('#search_field').keydown(function() {
       clearTimeout(timerIdentifier);
     });
+});
+
+self.port.on("focus-search-field", function() {
+  $('#search_field').focus();
 });
 
 function createHomePageTab() {
